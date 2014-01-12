@@ -1,9 +1,9 @@
-Nvts8a.Content = DS.Model.extend( {
+App.Content = DS.Model.extend({
 	title: DS.attr('string'),
 	isCompleted: DS.attr('boolean')
 });
 
-Nvts8a.Content.FIXTURES = [
+App.Content.FIXTURES = [
 	{
 		id: 1,
 		title: 'Learn Ember.js',
@@ -11,7 +11,7 @@ Nvts8a.Content.FIXTURES = [
 	},
 	{
 		id: 2,
-		title: '...',
+		title: 'THIS IS A TEST',
 		isCompleted: false
 	},
 	{

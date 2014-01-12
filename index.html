@@ -7,26 +7,47 @@
 	</head>
 
 	<body>
-	
-		<script type="text/x-handlebars" data-template-name="nvts8a">	
+
+		<script type="text/x-handlebars" data-template-name="app/index">
 			<div id='content' class='content'>
 				"This is some content."
+			
+				{{#each}}
+					<div {{bind-attr class="isCompleted:completed"}}>
+						<br />title: {{title}}
+						<br />isCompleted: {{isCompleted}}
+						<br />
+					</div>
+				{{/each}}
 			</div>
 		</script>
 
+		<script type="text/x-handlebars" data-template-name="app">	
+			
+			<div id='navigation' class='navigation'>
+				"This is some naviagation"
+				<a href=".">All</a>
+				{{#link-to "app.true"}}True{{/link-to}}
+				<a href="false">False</a>
+			</div>
+		
+			<br />
+			<br />
 
-		<!-- js/libs/ dependencies -->
+			{{outlet}}
+
+		</script>
+
+
+		<!-- Dependencies -->
 		<script src="js/libs/jquery-1.10.2.js"></script>
 		<script src="js/libs/handlebars-1.1.2.js"></script>
 		<script src="js/libs/ember-1.2.0.js"></script>
 		<script src="js/libs/ember-data.js"></script>
 		
-		<!-- js/ ember code -->
+		<!-- Ember Implementation -->
 		<script src="js/application.js"></script>
+		<script src="js/models/content.js"></script>
 		<script src="js/router.js"></script>
-
-		<!-- js/models/ ember models -->
-		<script src-"js/models/nvts8a.js"></script>
-
 	</body>
 </html>

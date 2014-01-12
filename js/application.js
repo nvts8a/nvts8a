@@ -1,3 +1,5 @@
-window.Nvts8a = Ember.Application.create();
+// The app to end all apps
+window.App = Ember.Application.create();
 
-Nvts8a.ApplicationAdapter = DS.FixtureAdapter.extend();
+App.ApplicationAdapter = DS.FixtureAdapter.extend();
+
