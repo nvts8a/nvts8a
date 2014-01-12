@@ -2,14 +2,16 @@
 App.Router.map( function() {
 	this.resource( 'app', { path: '/' }, function(){
 		// Child Routes
-		this.route( 'false' );
-		this.route( 'true' );
+		
+		// Testing Routes, remove when no longer needed
+		//this.route( 'false' );
+		//this.route( 'true' );
 	});
 });
 
 App.AppRoute = Ember.Route.extend( { 
 	model: function() {
-		return this.store.find( 'content' );
+		return this.store.find( 'experience' );
 	}
 });
 
@@ -21,6 +23,8 @@ App.AppIndexRoute = Ember.Route.extend( {
 	}
 });
 
+// Testing Routes, remove when no longer needed
+/*
 App.AppFalseRoute = Ember.Route.extend( {
 	model: function(){
 		return this.store.filter( 'content', function(content){
@@ -42,3 +46,4 @@ App.AppTrueRoute = Ember.Route.extend( {
 		this.render( 'app/index', { controller: controller } );
 	}
 });
+*/

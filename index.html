@@ -13,7 +13,7 @@
 				"This is some content."
 			
 				{{#each}}
-					<div {{bind-attr class="isCompleted:completed"}}>
+					<div>
 						<br />title: {{title}}
 						<br />isCompleted: {{isCompleted}}
 						<br />
@@ -27,8 +27,6 @@
 			<div id='navigation' class='navigation'>
 				"This is some naviagation"
 				{{#link-to "app.index"}}All{{/link-to}}
-				{{#link-to "app.true"}}True{{/link-to}}
-				{{#link-to "app.false"}}False{{/link-to}}
 			</div>
 		
 			<br />
