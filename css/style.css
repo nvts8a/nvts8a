@@ -2,8 +2,8 @@
 
 body {
 	width: 100%;
-	z-index: 1;
-	background-image: url('../images/background.jpg');
+	z-index: 0;
+	background-image: url('../img/background.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
@@ -13,8 +13,12 @@ body {
 /* Baddy Rules */
 
 div.baddies div.baddy {
+	z-index: 1;
 	position: absolute;
-	z-index: 2;
+}
+
+div.baddies div.baddy img {
+	z-index: 1;
 }
 
 /* Navigation Rules */
@@ -51,7 +55,7 @@ div.content {
 	display: block;
 	width: 640px;
 	height: 640px;
-	z-index: 4;
+	z-index: 2;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 48px;
