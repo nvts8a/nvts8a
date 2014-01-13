@@ -8,25 +8,16 @@
 
 	<body>
 
-		<script type="text/x-handlebars" data-template-name="app/index">
-			<div id='content' class='content'>
-				"This is some content."
-			
-				{{#each}}
-					<div>
-						<br />title: {{title}}
-						<br />isCompleted: {{isCompleted}}
-						<br />
-					</div>
-				{{/each}}
-			</div>
-		</script>
+		<!-- App Template --> 
 
 		<script type="text/x-handlebars" data-template-name="app">	
 			
 			<div id='navigation' class='navigation'>
 				"This is some naviagation"
-				{{#link-to "app.index"}}All{{/link-to}}
+				{{#link-to "app.index"}}Index{{/link-to}}
+				{{#link-to "app.experience"}}Experience{{/link-to}}
+				{{#link-to "app.skills"}}Skills{{/link-to}}
+				{{#link-to "app.references"}}References{{/link-to}}
 			</div>
 		
 			<br />
@@ -36,6 +27,37 @@
 
 		</script>
 
+		<!-- App Child Route Templates -->
+
+		<script type="text/x-handlebars" data-template-name="app/index">
+			<div id='content' class='content'>
+				"This is some content."
+			</div>
+		</script>	
+
+		<script type="text/x-handlebars" data-template-name="app/experience">	
+			Experience
+
+			{{#each}}
+				Exp
+			{{/each}}
+		</script>
+		
+		<script type="text/x-handlebars" data-template-name="app/skills">	
+			Skills
+
+			{{#each}}
+				Skill
+			{{/each}}
+		</script>
+		
+		<script type="text/x-handlebars" data-template-name="app/references">	
+			References
+
+			{{#each}}
+				Ref
+			{{/each}}
+		</script>
 
 		<!-- Dependencies -->
 		<script src="js/libs/jquery-1.10.2.js"></script>

@@ -2,48 +2,34 @@
 App.Router.map( function() {
 	this.resource( 'app', { path: '/' }, function(){
 		// Child Routes
-		
-		// Testing Routes, remove when no longer needed
-		//this.route( 'false' );
-		//this.route( 'true' );
+		this.route( 'experience' );
+		this.route( 'skills' );
+		this.route( 'references' );
 	});
 });
 
 App.AppRoute = Ember.Route.extend( { 
+});
+
+// Route Models
+App.AppIndexRoute = Ember.Route.extend( {
+});
+
+App.AppExperienceRoute = Ember.Route.extend( {
 	model: function() {
 		return this.store.find( 'experience' );
 	}
 });
 
-
-// Child Routes
-App.AppIndexRoute = Ember.Route.extend( {
+App.AppSkillsRoute = Ember.Route.extend( {
 	model: function() {
-		return this.modelFor( 'app' );
+		return this.store.find( 'skills' );
 	}
 });
 
-// Testing Routes, remove when no longer needed
-/*
-App.AppFalseRoute = Ember.Route.extend( {
-	model: function(){
-		return this.store.filter( 'content', function(content){
-			return !content.get('isCompleted');
-		});
-	},
-	renderTemplate: function(controller){
-		this.render( 'app/index', { controller: controller } );
+App.AppReferencesRoute = Ember.Route.extend( {
+	model: function() {
+		return this.store.find( 'references' );
 	}
 });
 
-App.AppTrueRoute = Ember.Route.extend( {
-	model: function(){
-		return this.store.filter( 'content', function(content){
-			return content.get('isCompleted');
-		});
-	},
-	renderTemplate: function(controller){
-		this.render( 'app/index', { controller: controller } );
-	}
-});
-*/
