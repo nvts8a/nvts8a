@@ -1,19 +1,23 @@
 /* Global App Rules */
 
 body {
+	width: 100%;
 	font-family: Arial, Helvetica, sans-serif
 }
 
+/* Navigation Rules */
+
 div.navigation {
 	display: block;
-	width: 100%;
+	width: 640px;
 	margin-left: auto;
 	margin-right: auto;
+	border: 5px solid red;
 }
 
 div.navigation div.link {
 	display: inline-block;
-	width: 19%;
+	width: 124px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -23,3 +27,20 @@ div.navigation div.link a.selected {
 	font-size: 30px;
 	font-weight: bold;
 }
+
+div#experience.navigation div.link {
+	width: 32%;
+}
+
+/* Content Rules */
+
+div.content {
+	display: block;
+	width: 640px;
+	height: 640px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 64px;
+	border: 5px solid red;
+}
+

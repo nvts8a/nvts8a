@@ -12,16 +12,13 @@
 
 		<script type="text/x-handlebars" data-template-name="app">	
 			
-			<div id='navigation' class='navigation'>
+			<div id='app' class='navigation'>
 				<div class='link'>{{#link-to "app.index"		activeClass="selected"}}Home{{/link-to}}</div>
 				<div class='link'>{{#link-to "app.experience"	activeClass="selected"}}Experience{{/link-to}}</div>
 				<div class='link'>{{#link-to "app.skills"		activeClass="selected"}}Skills{{/link-to}}</div>
 				<div class='link'>{{#link-to "app.references"	activeClass="selected"}}References{{/link-to}}</div>
 				<div class='link'>{{#link-to "app.about"		activeClass="selected"}}About{{/link-to}}</div>
 			</div>
-		
-			<br />
-			<br />
 
 			{{outlet}}
 
@@ -30,29 +27,33 @@
 		<!-- App Child Templates -->
 
 		<script type="text/x-handlebars" data-template-name="app/index">
-			<div id='content' class='content'>
+			<div id="index" class="content">
 				"This is some content."
 			</div>
 		</script>	
 
 		<script type="text/x-handlebars" data-template-name="app/skills">	
-			Skills
+			<div id="skills" class="content">
+				Skills
 
-			{{#each}}
-				{{type}}<br/>
-			{{/each}}
+				{{#each}}
+					{{type}}<br/>
+				{{/each}}
+			</div>
 		</script>
 		
 		<script type="text/x-handlebars" data-template-name="app/references">	
-			References
+			<div id="references" class="content">
+				References
 
-			{{#each}}
-				Ref
-			{{/each}}
+				{{#each}}
+					Ref
+				{{/each}}
+			</div>
 		</script>
 		
 		<script type="text/x-handlebars" data-template-name="app/about">
-			<div id='content' class='content'>
+			<div id='about' class='content'>
 				"This is about me content."
 			</div>
 		</script>	
@@ -62,15 +63,15 @@
 		<!-- App Experience Template -->
 
 		<script type="text/x-handlebars" data-template-name="app/experience">	
-			<div id="experience" class="content">
-				<br/><div class="content-header">Experience</div>
+			<div id="experience" class="navigation">
 				<div class='link'>{{#link-to "app.experience.index"		activeClass="selected"}}All{{/link-to}}</div>
 				<div class='link'>{{#link-to "app.experience.school"	activeClass="selected"}}School{{/link-to}}</div>
 				<div class='link'>{{#link-to "app.experience.work"		activeClass="selected"}}Work{{/link-to}}</div>
-				<br/>
 			</div>
 
-			{{outlet}}
+			<div id="experience" class="content">
+				{{outlet}}
+			</div>
 		</script>
 
 		<!-- App Experience Child Templates -->
