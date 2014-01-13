@@ -3,7 +3,7 @@
 body {
 	width: 100%;
 	z-index: 0;
-	background-image: url('../img/background.jpg');
+	background-image: url('../img/background.png');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
@@ -26,6 +26,7 @@ div.baddies div.baddy img {
 div.navigation {
 	display: block;
 	width: 640px;
+	height: 100px;
 	z-index: 3;
 	margin-left: auto;
 	margin-right: auto;
@@ -34,15 +35,15 @@ div.navigation {
 
 div.navigation div.link {
 	display: inline-block;
-	width: 124px;
+	width: 19.5%;
 	margin-left: auto;
 	margin-right: auto;
-	text-align: center;
 }
 
-div.navigation div.link a.selected {
-	font-size: 30px;
-	font-weight: bold;
+div.navigation div.link img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 div#experience.navigation div.link {
