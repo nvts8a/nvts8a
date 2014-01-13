@@ -13,11 +13,11 @@
 		<script type="text/x-handlebars" data-template-name="app">	
 			
 			<div id='navigation' class='navigation'>
-				"This is some naviagation"
-				{{#link-to "app.index"}}Index{{/link-to}}
-				{{#link-to "app.experience"}}Experience{{/link-to}}
-				{{#link-to "app.skills"}}Skills{{/link-to}}
-				{{#link-to "app.references"}}References{{/link-to}}
+				<div class='link'>{{#link-to "app.index"		activeClass="selected"}}Home{{/link-to}}</div>
+				<div class='link'>{{#link-to "app.experience"	activeClass="selected"}}Experience{{/link-to}}</div>
+				<div class='link'>{{#link-to "app.skills"		activeClass="selected"}}Skills{{/link-to}}</div>
+				<div class='link'>{{#link-to "app.references"	activeClass="selected"}}References{{/link-to}}</div>
+				<div class='link'>{{#link-to "app.about"		activeClass="selected"}}About{{/link-to}}</div>
 			</div>
 		
 			<br />
@@ -36,11 +36,19 @@
 		</script>	
 
 		<script type="text/x-handlebars" data-template-name="app/experience">	
-			Experience
-
-			{{#each}}
-				Exp
-			{{/each}}
+			<div id="experience" class="content">
+				<br/><div class="content-header">Experience</div>
+				<br/>
+				{{#each}}
+				<div class="item">
+					<br/>{{type}}
+					<br/>{{location}}
+					<br/>{{title}}
+					<br/>
+					<br/>
+				</div>
+				{{/each}}
+			</div>
 		</script>
 		
 		<script type="text/x-handlebars" data-template-name="app/skills">	
@@ -58,13 +66,20 @@
 				Ref
 			{{/each}}
 		</script>
+		
+		<script type="text/x-handlebars" data-template-name="app/about">
+			<div id='content' class='content'>
+				"This is about me content."
+			</div>
+		</script>	
 
 		<!-- Dependencies -->
+		<script src="js/libs/moment.min.js"></script>
 		<script src="js/libs/jquery-1.10.2.js"></script>
 		<script src="js/libs/handlebars-1.1.2.js"></script>
 		<script src="js/libs/ember-1.2.0.js"></script>
 		<script src="js/libs/ember-data.js"></script>
-		
+
 		<!-- Ember Implementation -->
 		<script src="js/application.js"></script>
 		<script src="js/models/content.js"></script>

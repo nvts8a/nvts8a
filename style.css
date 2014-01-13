@@ -1,3 +1,25 @@
+/* Global App Rules */
+
 body {
 	font-family: Arial, Helvetica, sans-serif
+}
+
+div.navigation {
+	display: block;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.navigation div.link {
+	display: inline-block;
+	width: 19%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+div.navigation div.link a.selected {
+	font-size: 30px;
+	font-weight: bold;
 }

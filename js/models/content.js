@@ -80,12 +80,45 @@ App.References.FIXTURES = [
 App.Skills.FIXTURES = [
 	{
 		id: 1,
+		skill: "Javascript",
+		type: "language",
+		duration: "2",
+		location: "ePrize"
 	},
 	{
 		id: 2,
+		skill: "SQL",
+		type: "language",
+		duration: "4",
+		location: "DTE,ePrize"
 	},
 	{
 		id: 3,
+		skill: "Java",
+		type: "language",
+		duration: "2",
+		location: "DTE"
 	},
+	{
+		id: 4,
+		skill: "Ember.js",
+		type: "technology",
+		duration: "1",
+		location: null
+	},
+	{
+		id: 5,
+		skill: "Web Services",
+		type: "technology",
+		duration: "4",
+		location: "DTE,ePrize"
+	},
+	{
+		id: 6,
+		skill: "TTD",
+		type: "process",
+		duration: "2",
+		location: "DTE"
+	}
 ];
 
