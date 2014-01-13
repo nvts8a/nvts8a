@@ -27,7 +27,7 @@
 
 		</script>
 
-		<!-- App Child Route Templates -->
+		<!-- App Child Templates -->
 
 		<script type="text/x-handlebars" data-template-name="app/index">
 			<div id='content' class='content'>
@@ -35,27 +35,11 @@
 			</div>
 		</script>	
 
-		<script type="text/x-handlebars" data-template-name="app/experience">	
-			<div id="experience" class="content">
-				<br/><div class="content-header">Experience</div>
-				<br/>
-				{{#each}}
-				<div class="item">
-					<br/>{{type}}
-					<br/>{{location}}
-					<br/>{{title}}
-					<br/>
-					<br/>
-				</div>
-				{{/each}}
-			</div>
-		</script>
-		
 		<script type="text/x-handlebars" data-template-name="app/skills">	
 			Skills
 
 			{{#each}}
-				Skill
+				{{type}}<br/>
 			{{/each}}
 		</script>
 		
@@ -72,6 +56,36 @@
 				"This is about me content."
 			</div>
 		</script>	
+
+
+
+		<!-- App Experience Template -->
+
+		<script type="text/x-handlebars" data-template-name="app/experience">	
+			<div id="experience" class="content">
+				<br/><div class="content-header">Experience</div>
+				<div class='link'>{{#link-to "app.experience.index"		activeClass="selected"}}All{{/link-to}}</div>
+				<div class='link'>{{#link-to "app.experience.school"	activeClass="selected"}}School{{/link-to}}</div>
+				<div class='link'>{{#link-to "app.experience.work"		activeClass="selected"}}Work{{/link-to}}</div>
+				<br/>
+			</div>
+
+			{{outlet}}
+		</script>
+
+		<!-- App Experience Child Templates -->
+		
+		<script type="text/x-handlebars" data-template-name="app/experience/index">	
+			{{#each}}
+			<div class="item">
+				<br/>{{type}}
+				<br/>{{location}}
+				<br/>{{title}}
+				<br/>
+				<br/>
+			</div>
+			{{/each}}
+		</script>
 
 		<!-- Dependencies -->
 		<script src="js/libs/moment.min.js"></script>
