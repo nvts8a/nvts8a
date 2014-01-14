@@ -19,21 +19,22 @@
 				<div class='link'>{{#link-to "app.references"	activeClass="selected"}}<img id="references" src="img/icon/references-icon.png">{{/link-to}}</div>
 				<div class='link'>{{#link-to "app.about"		activeClass="selected"}}<img id="about" src="img/icon/about-icon.png">{{/link-to}}</div>
 			</div>
-
-			{{outlet}}
-
+			
+			<div class="section">
+				{{outlet}}
+			</div>
 		</script>
 
 		<!-- App Child Templates -->
 
 		<script type="text/x-handlebars" data-template-name="app/index">
-			<div id="index" class="content">
+			<div class="content">
 				"This is some content."
 			</div>
 		</script>	
 
 		<script type="text/x-handlebars" data-template-name="app/references">	
-			<div id="references" class="content">
+			<div class="content">
 				References
 
 				{{#each}}
@@ -43,7 +44,7 @@
 		</script>
 		
 		<script type="text/x-handlebars" data-template-name="app/about">
-			<div id='about' class='content'>
+			<div class="content">
 				"This is about me content."
 			</div>
 		</script>	
@@ -53,12 +54,12 @@
 		<!-- App Experience Template -->
 
 		<script type="text/x-handlebars" data-template-name="app/experience">	
-			<div id="experience" class="content">
-				<div class="navigation">
-					<div class='link'>{{#link-to "app.experience.school"	activeClass="selected"}}<img id="school" src="img/icon/school-icon.png">{{/link-to}}</div>
-					<div class='link'>{{#link-to "app.experience.work"		activeClass="selected"}}<img id="work" src="img/icon/work-icon.png">{{/link-to}}</div>
-				</div>
-				{{outlet}}
+			<div id="experience" class="navigation">
+				<div class='link'>{{#link-to "app.experience.school"	activeClass="selected"}}<img id="school" src="img/icon/school-icon.png">{{/link-to}}</div>
+				<div class='link'>{{#link-to "app.experience.work"		activeClass="selected"}}<img id="work" src="img/icon/work-icon.png">{{/link-to}}</div>
+			</div>
+			<div class="content">
+					{{outlet}}
 			</div>
 		</script>
 
@@ -81,12 +82,13 @@
 		<!-- App Skils Template -->
 
 		<script type="text/x-handlebars" data-template-name="app/skills">	
-			<div id="skills" class="content">
-				<div class="navigation">
-					<div class='link'>{{#link-to "app.skills.languages"		activeClass="selected"}}<img id="languages" src="img/icon/languages-icon.png">{{/link-to}}</div>
-					<div class='link'>{{#link-to "app.skills.technologies"	activeClass="selected"}}<img id="technologies" src="img/icon/technologies-icon.png">{{/link-to}}</div>
-					<div class='link'>{{#link-to "app.skills.processes"		activeClass="selected"}}<img id="processes" src="img/icon/processes-icon.png">{{/link-to}}</div>
-				</div>
+			<div id="skills" class="navigation">
+				<div class='link'>{{#link-to "app.skills.languages"		activeClass="selected"}}<img id="languages" src="img/icon/languages-icon.png">{{/link-to}}</div>
+				<div class='link'>{{#link-to "app.skills.technologies"	activeClass="selected"}}<img id="technologies" src="img/icon/technologies-icon.png">{{/link-to}}</div>
+				<div class='link'>{{#link-to "app.skills.processes"		activeClass="selected"}}<img id="processes" src="img/icon/processes-icon.png">{{/link-to}}</div>
+			</div>
+
+			<div class="content">
 				{{outlet}}
 			</div>
 		</script>	
@@ -102,11 +104,13 @@
 		<!-- Animated Baddies -->
 		
 		<div id="baddies" class="baddies">
-			<div class="baddy" id="1"><img src="img/baddy.gif"></div>
-			<div class="baddy" id="2"><img src="img/baddy.gif"></div>
-			<div class="baddy" id="3"><img src="img/baddy.gif"></div>
-			<div class="baddy" id="4"><img src="img/baddy.gif"></div>
-			<div class="baddy" id="5"><img src="img/baddy.gif"></div>
+			<!--
+			<div class="baddy" id="1"><img src="img/icon/home-icon.png"></div>
+			<div class="baddy" id="2"><img src="img/icon/home-icon.png"></div>
+			<div class="baddy" id="3"><img src="img/icon/home-icon.png"></div>
+			<div class="baddy" id="4"><img src="img/icon/home-icon.png"></div>
+			<div class="baddy" id="5"><img src="img/icon/home-icon.png"></div>
+			-->
 		</div>
 
 		<!-- Dependencies -->
@@ -118,6 +122,7 @@
 
 		<!-- Javscript Implmentations -->
 		<script src="js/app/baddies.js"></script>	
+		<script src="js/app/navigation.js"></script>	
 
 		<!-- Ember Implementation -->
 		<script src="js/ember/application.js"></script>

@@ -1,4 +1,11 @@
+var baddies = new Array();
+init();
+
+// Baddy Functions
+
+// Takes in a id of a element with the baddy class and outputs a class with default data
 function createBaddy(id) {
+	
 	var baddy = new Object();
 
 	// Baddy Constents
@@ -12,18 +19,20 @@ function createBaddy(id) {
 	return baddy;
 }
 
-// Baddy Functions
-function resetBaddy(baddy) { 
-	var windowHeight = $(window).height();
-	var newYPosition = Math.floor( Math.random() * windowHeight );
+// Initialiazes baddies and sets them in motion
+function init() {
 
-	baddy.ySpeed = Math.floor( Math.random() * 12 ) - 6;
-	baddy.xSpeed = Math.floor( Math.random() * 4 ) + 8;
+	var baddyElements = $('div.baddies > div.baddy');
 
-	baddy.element.css( 'left', '-64px' );
-	baddy.element.css( 'top', newYPosition + 'px' );
-};
+	for ( var i = 0; i < baddyElements.length ; i++ ) {
 
+		baddies[i] = createBaddy( baddyElements[i].id );
+		resetBaddy( baddies[i] );
+		moveBaddy( baddies[i] );
+	}
+}
+
+// Takes in a boddy class and moves it per its speeds or resets it if it goes off screen
 function moveBaddy(baddy) {
 
 	var windowWidth = $(window).width();
@@ -45,64 +54,18 @@ function moveBaddy(baddy) {
 	setTimeout( function() { moveBaddy( baddy ) }, 20 );	
 };
 
-var baddies = new Array();
-for ( var i=1; i<=5; i++ ) {
-
-	baddies[i] = createBaddy(i);
-	resetBaddy( baddies[i] );
-	moveBaddy( baddies[i] );
-}
-
-/*
-
-var baddy = null;
-var baddyXSpeed = 0; 
-var baddyYSpeed = 0; 
-
-function init() {
-	baddy = $("div.baddy");
-	resetBaddy();
-	move();
-}
-
-function move() {
-	var windowWidth = $(window).width();
-	var newXPosition = parseInt( baddy.css('left') ) + baddyXSpeed;
- 
-	var windowHeight = $(window).height();
-	var newYPosition = parseInt( baddy.css('top') ) + baddyYSpeed;
-
-	//console.log( windowWidth );
-	//console.log( newXPosition );
-
-	if( newXPosition > windowWidth ||
-		newYPosition > windowHeight ||
-		newYPosition < -64 ) {
-		resetBaddy();
-	}
-	else {
-		baddy.css( 'left', newXPosition + 'px' );
-		baddy.css( 'top', newYPosition + 'px' );
-	}
-
-	setTimeout( move, 20 );
-}
-
-function resetBaddy() {
+function resetBaddy(baddy) { 
 	var windowHeight = $(window).height();
 	var newYPosition = Math.floor( Math.random() * windowHeight );
 
-	baddyYSpeed = Math.floor( Math.random() * 12 ) - 6;	
-	baddyXSpeed = Math.floor( Math.random() * 4 ) + 8;
-	
-	//console.log( windowHeight );
+	baddy.ySpeed = Math.floor( Math.random() * 12 ) - 6;
+	baddy.xSpeed = Math.floor( Math.random() * 4 ) + 8;
 
-	baddy.css( 'left', '-64px' );
-	baddy.css( 'top', newYPosition + 'px' );
+	baddy.element.css( 'left', '-64px' );
+	baddy.element.css( 'top', newYPosition + 'px' );
+};
+
+
+function changePhoto() {
+	$('div.baddies div.baddy img').attr( 'src', 'null' );
 }
-
-
-
-window.onload =init;
-*/
-

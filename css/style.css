@@ -13,6 +13,7 @@ body * {
 	position: relative;
 }
 
+
 /* Baddy Rules */
 
 div.baddies div.baddy {
@@ -21,6 +22,7 @@ div.baddies div.baddy {
 
 div.baddies div.baddy img {}
 
+
 /* Navigation Rules */
 
 div.navigation {
@@ -28,16 +30,29 @@ div.navigation {
 	height: 64px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+div.navigation#app {
 	padding-bottom: 32px;
 	padding-top: 32px;
 	width: 640px;
+}
+
+div.navigation#experience {
+	padding-top: 32px;
+	width: 256px;
+}
+
+div.navigation#skills {
+	padding-top: 32px;
+	width: 384px;
 }
 
 div.navigation div.link {
 	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 19.5%;
+	width: 124px;
 }
 
 div.navigation div.link img {
@@ -46,23 +61,20 @@ div.navigation div.link img {
 	margin-right: auto;
 }
 
-div#experience.navigation div.link {
-	width: 32%;
-}
 
-/* Content Rules */
+/* Section Rules */
 
-div.content {
+div.section {
 	background-color: #33CCFF;
-	border-width: 16px;
-	border-radius: 16px;
-	border-style: solid;
-	border-color: #33CCFF;
 	display: block;
 	height: 640px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 48px;
 	width: 640px;
 }
 
+div.section div.content {
+	margin-left: 64px;
+	margin-right: 64px;
+	padding-top: 32px;
+}
