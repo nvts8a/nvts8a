@@ -7,18 +7,6 @@
 	</head>
 
 	<body>
-
-		<!-- Animated Baddies -->
-
-		
-		<div id="baddies" class="baddies">
-			<div class="baddy" id="1"><img src="img/baddy.gif"></div>
-			<div class="baddy" id="2"><img src="img/baddy.gif"></div>
-			<div class="baddy" id="3"><img src="img/baddy.gif"></div>
-			<div class="baddy" id="4"><img src="img/baddy.gif"></div>
-			<div class="baddy" id="5"><img src="img/baddy.gif"></div>
-		</div>
-
 	
 		<!-- App Template --> 
 
@@ -44,16 +32,6 @@
 			</div>
 		</script>	
 
-		<script type="text/x-handlebars" data-template-name="app/skills">	
-			<div id="skills" class="content">
-				Skills
-
-				{{#each}}
-					{{type}}<br/>
-				{{/each}}
-			</div>
-		</script>
-		
 		<script type="text/x-handlebars" data-template-name="app/references">	
 			<div id="references" class="content">
 				References
@@ -75,13 +53,11 @@
 		<!-- App Experience Template -->
 
 		<script type="text/x-handlebars" data-template-name="app/experience">	
-			<div id="experience" class="navigation">
-				<div class='link'>{{#link-to "app.experience.index"		activeClass="selected"}}All{{/link-to}}</div>
-				<div class='link'>{{#link-to "app.experience.school"	activeClass="selected"}}School{{/link-to}}</div>
-				<div class='link'>{{#link-to "app.experience.work"		activeClass="selected"}}Work{{/link-to}}</div>
-			</div>
-
 			<div id="experience" class="content">
+				<div class="navigation">
+					<div class='link'>{{#link-to "app.experience.school"	activeClass="selected"}}<img id="school" src="img/icon/school-icon.png">{{/link-to}}</div>
+					<div class='link'>{{#link-to "app.experience.work"		activeClass="selected"}}<img id="work" src="img/icon/work-icon.png">{{/link-to}}</div>
+				</div>
 				{{outlet}}
 			</div>
 		</script>
@@ -100,6 +76,39 @@
 			{{/each}}
 		</script>
 
+
+
+		<!-- App Skils Template -->
+
+		<script type="text/x-handlebars" data-template-name="app/skills">	
+			<div id="skills" class="content">
+				<div class="navigation">
+					<div class='link'>{{#link-to "app.skills.languages"		activeClass="selected"}}<img id="languages" src="img/icon/languages-icon.png">{{/link-to}}</div>
+					<div class='link'>{{#link-to "app.skills.technologies"	activeClass="selected"}}<img id="technologies" src="img/icon/technologies-icon.png">{{/link-to}}</div>
+					<div class='link'>{{#link-to "app.skills.processes"		activeClass="selected"}}<img id="processes" src="img/icon/processes-icon.png">{{/link-to}}</div>
+				</div>
+				{{outlet}}
+			</div>
+		</script>	
+
+		<!-- App Skills Child Templates -->
+
+		<script type="text/x-handlebars" data-template-name="app/skills/index">	
+			{{#each}}
+				{{type}}<br/>
+			{{/each}}	
+		</script>
+
+		<!-- Animated Baddies -->
+		
+		<div id="baddies" class="baddies">
+			<div class="baddy" id="1"><img src="img/baddy.gif"></div>
+			<div class="baddy" id="2"><img src="img/baddy.gif"></div>
+			<div class="baddy" id="3"><img src="img/baddy.gif"></div>
+			<div class="baddy" id="4"><img src="img/baddy.gif"></div>
+			<div class="baddy" id="5"><img src="img/baddy.gif"></div>
+		</div>
+
 		<!-- Dependencies -->
 		<script src="js/libs/moment.min.js"></script>
 		<script src="js/libs/jquery-1.10.2.js"></script>
@@ -108,11 +117,11 @@
 		<script src="js/libs/ember-data.js"></script>
 
 		<!-- Javscript Implmentations -->
-		<script src="js/baddies.js"></script>	
+		<script src="js/app/baddies.js"></script>	
 
 		<!-- Ember Implementation -->
-		<script src="js/application.js"></script>
-		<script src="js/models/content.js"></script>
-		<script src="js/router.js"></script>
+		<script src="js/ember/application.js"></script>
+		<script src="js/ember/models/content.js"></script>
+		<script src="js/ember/router.js"></script>
 	</body>
 </html>

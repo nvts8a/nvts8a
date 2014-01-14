@@ -16,19 +16,20 @@ body * {
 /* Baddy Rules */
 
 div.baddies div.baddy {
+	position: absolute;
 }
 
-div.baddies div.baddy img {
-}
+div.baddies div.baddy img {}
 
 /* Navigation Rules */
 
 div.navigation {
-	border: 5px solid red;
 	display: block;
-	height: 100px;
+	height: 64px;
 	margin-left: auto;
 	margin-right: auto;
+	padding-bottom: 32px;
+	padding-top: 32px;
 	width: 640px;
 }
 
