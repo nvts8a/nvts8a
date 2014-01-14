@@ -9,14 +9,16 @@ body {
 	width: 100%;
 }
 
-/* Baddy Rules */
-
-div.baddies div.baddy {
+body * {
 	position: relative;
 }
 
+/* Baddy Rules */
+
+div.baddies div.baddy {
+}
+
 div.baddies div.baddy img {
-	position: relative;
 }
 
 /* Navigation Rules */
