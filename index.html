@@ -26,6 +26,7 @@
 
 			<div id="app" class='footer'>
 				<ul>
+					<li>Lorem ipsum dolor sit amet</li>
 					<li>© MMXIV STEVEN J JUSTIN</li>
 				</ul>	
 			</div>
@@ -36,16 +37,23 @@
 
 		<script type="text/x-handlebars" data-template-name="app/index">
 			<div class="content">
-				"This is some content."
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius laoreet ornare. Curabitur venenatis eu dolor et pretium. Nullam pellentesque mollis tellus vitae sollicitudin. Nulla facilisi. Suspendisse porttitor elit quam, vitae volutpat lorem pretium vitae. Sed dignissim ligula nec eros ultricies facilisis. Nunc dapibus ante quis dui eleifend, a aliquam metus imperdiet. Vestibulum ac purus in urna porta congue.
 			</div>
 		</script>	
 
 		<script type="text/x-handlebars" data-template-name="app/references">	
 			<div class="content">
-				References
-
+				<div class="description">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius laoreet ornare.
+				</div>
+				
 				{{#each}}
-					Ref
+				<div class="item">
+					{{name}}<br/>
+					{{position}} at {{location}}<br/>
+					{{phoneNumber}}<br>
+					{{emailAddress}}
+				</div>
 				{{/each}}
 			</div>
 		</script>
@@ -53,8 +61,12 @@
 		<script type="text/x-handlebars" data-template-name="app/about">
 			<div id="about" class="content">	
 				<div class="photo">
-					<img class='photo' src="https://graph.facebook.com/nvts8a/picture?type=large">
+					<img class='me' src="img/me.jpg">
 					<img class='frame' src="img/frame.png">
+				</div>
+
+				<div class="description">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius laoreet ornare. Curabitur venenatis eu dolor et pretium. Nullam pellentesque mollis tellus vitae sollicitudin. Nulla facilisi. Suspendisse porttitor elit quam, vitae volutpat lorem pretium vitae. Sed dignissim ligula nec eros ultricies facilisis. Nunc dapibus ante quis dui eleifend, a aliquam metus imperdiet. Vestibulum ac purus in urna porta congue.
 				</div>
 
 				<div class="social-sites">
@@ -75,7 +87,7 @@
 				<div class='link'>{{#link-to "app.experience.work"		activeClass="selected"}}<img id="work" src="img/icon/work-icon.png">{{/link-to}}</div>
 			</div>
 			<div class="content">
-					{{outlet}}
+				{{outlet}}
 			</div>
 		</script>
 

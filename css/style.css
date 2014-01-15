@@ -5,7 +5,9 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
-	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-family: "Courier New", Courier, monospace; 
+	font-weight: bold;
 	width: 100%;
 }
 
@@ -30,6 +32,7 @@ div.navigation {
 	height: 64px;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 0px;
 }
 
 div.navigation#app {
@@ -52,7 +55,8 @@ div.navigation div.link {
 	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 124px;
+	padding: 0px;
+	width: 120px;
 }
 
 div.navigation div.link img {
@@ -61,6 +65,19 @@ div.navigation div.link img {
 	margin-right: auto;
 }
 
+/* Footer Rules */
+
+div.footer {
+	background-color: #33CCFF;
+	margin-left: auto;
+	margin-right: auto;
+	width: 640px;	
+}
+
+div.footer ul li {
+	display: inline-block;
+	text-decoration: none;
+}
 
 /* Section Rules */
 
@@ -80,6 +97,9 @@ div.section div.content {
 	width: 512px;
 }
 
+div.section div.content div.item {
+	margin: 32px;
+}
 
 /* About Rules */
 
@@ -87,21 +107,27 @@ div#about div.photo {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 180px;
+	width: 512px;
 }
 
 div#about div.photo img.frame {
-	height: 212px;
-	left: -25px;
+	height: 512px;
+	left: 0px;
 	position: absolute;
-	top: -10px;
-	width: 230px;
+	top: 0px;
+	width: 512px;
+}
+
+div#about div.photo img.me {
+	height: 410px;
+	margin: 64px;
 }
 
 div#about div.social-sites {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 153px;
+	padding-top: 32px;
+	width: 170px;
 }
 
