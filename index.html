@@ -25,10 +25,7 @@
 			</div>
 
 			<div id="app" class='footer'>
-				<ul>
-					<li>Lorem ipsum dolor sit amet</li>
-					<li>© MMXIV STEVEN J JUSTIN</li>
-				</ul>	
+				<div id="copyright">© MMXIV Steven J. Justin</div>
 			</div>
 
 		</script>
@@ -37,14 +34,16 @@
 
 		<script type="text/x-handlebars" data-template-name="app/index">
 			<div class="content">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius laoreet ornare. Curabitur venenatis eu dolor et pretium. Nullam pellentesque mollis tellus vitae sollicitudin. Nulla facilisi. Suspendisse porttitor elit quam, vitae volutpat lorem pretium vitae. Sed dignissim ligula nec eros ultricies facilisis. Nunc dapibus ante quis dui eleifend, a aliquam metus imperdiet. Vestibulum ac purus in urna porta congue.
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius laoreet ornare.</p>
+				<p>Curabitur venenatis eu dolor et pretium. Nullam pellentesque mollis tellus vitae sollicitudin. Nulla facilisi.</p>
+				<p>Suspendisse porttitor elit quam, vitae volutpat lorem pretium vitae. Sed dignissim ligula nec eros ultricies facilisis. Nunc dapibus ante quis dui eleifend, a aliquam metus imperdiet. Vestibulum ac purus in urna porta congue.</p>
 			</div>
 		</script>	
 
 		<script type="text/x-handlebars" data-template-name="app/references">	
 			<div class="content">
 				<div class="description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius laoreet ornare.
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius laoreet ornare.</p>
 				</div>
 				
 				{{#each}}
@@ -66,7 +65,9 @@
 				</div>
 
 				<div class="description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius laoreet ornare. Curabitur venenatis eu dolor et pretium. Nullam pellentesque mollis tellus vitae sollicitudin. Nulla facilisi. Suspendisse porttitor elit quam, vitae volutpat lorem pretium vitae. Sed dignissim ligula nec eros ultricies facilisis. Nunc dapibus ante quis dui eleifend, a aliquam metus imperdiet. Vestibulum ac purus in urna porta congue.
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius laoreet ornare.</p>
+					<p>Curabitur venenatis eu dolor et pretium. Nullam pellentesque mollis tellus vitae sollicitudin. Nulla facilisi.</p>
+					<p>Suspendisse porttitor elit quam, vitae volutpat lorem pretium vitae. Sed dignissim ligula nec eros ultricies facilisis. Nunc dapibus ante quis dui eleifend, a aliquam metus imperdiet. Vestibulum ac purus in urna porta congue.</p>
 				</div>
 
 				<div class="social-sites">
@@ -86,21 +87,24 @@
 				<div class='link'>{{#link-to "app.experience.school"	activeClass="selected"}}<img id="school" src="img/icon/school-icon.png">{{/link-to}}</div>
 				<div class='link'>{{#link-to "app.experience.work"		activeClass="selected"}}<img id="work" src="img/icon/work-icon.png">{{/link-to}}</div>
 			</div>
+		
 			<div class="content">
+				<div class="description">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius laoreet ornare.</p>
+				</div>
+				
 				{{outlet}}
 			</div>
 		</script>
 
 		<!-- App Experience Child Templates -->
 		
-		<script type="text/x-handlebars" data-template-name="app/experience/index">	
+		<script type="text/x-handlebars" data-template-name="app/experience/index">		
 			{{#each}}
 			<div class="item">
-				<br/>{{type}}
-				<br/>{{location}}
-				<br/>{{title}}
-				<br/>
-				<br/>
+				{{location}}<br/>
+				{{title}}<br/>
+				January 0000 to December 9999<br/>
 			</div>
 			{{/each}}
 		</script>
@@ -116,7 +120,12 @@
 				<div class='link'>{{#link-to "app.skills.processes"		activeClass="selected"}}<img id="processes" src="img/icon/processes-icon.png">{{/link-to}}</div>
 			</div>
 
+			
 			<div class="content">
+				<div class="description">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius laoreet ornare.</p>
+				</div> 
+				
 				{{outlet}}
 			</div>
 		</script>	
@@ -125,20 +134,21 @@
 
 		<script type="text/x-handlebars" data-template-name="app/skills/index">	
 			{{#each}}
-				{{type}}<br/>
+			<div class="item">
+				{{skill}}: {{duration}} years<br/>
+				At: {{location}}</br>
+			</div>
 			{{/each}}	
 		</script>
 
 		<!-- Animated Baddies -->
 		
 		<div id="baddies" class="baddies">
-			<!--
-			<div class="baddy" id="1"><img src="img/icon/home-icon.png"></div>
-			<div class="baddy" id="2"><img src="img/icon/home-icon.png"></div>
-			<div class="baddy" id="3"><img src="img/icon/home-icon.png"></div>
-			<div class="baddy" id="4"><img src="img/icon/home-icon.png"></div>
-			<div class="baddy" id="5"><img src="img/icon/home-icon.png"></div>
-			-->
+			<div class="baddy" id="1"><img src="img/icon/about-icon.png"></div>
+			<div class="baddy" id="2"><img src="img/icon/about-icon.png"></div>
+			<div class="baddy" id="3"><img src="img/icon/about-icon.png"></div>
+			<div class="baddy" id="4"><img src="img/icon/about-icon.png"></div>
+			<div class="baddy" id="5"><img src="img/icon/about-icon.png"></div>
 		</div>
 
 
