@@ -136,7 +136,10 @@
 			{{#each}}
 			<div class="item">
 				{{skill}}: {{duration}} years<br/>
+				{{#if location}}
 				At: {{location}}</br>
+				{{else}}
+				{{/if}}
 			</div>
 			{{/each}}	
 		</script>
