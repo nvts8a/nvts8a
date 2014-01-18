@@ -1,5 +1,5 @@
 var baddies = new Array();
-init();
+var baddiesOn = false;
 
 // Baddy Functions
 
@@ -20,7 +20,10 @@ function createBaddy(id) {
 }
 
 // Initialiazes baddies and sets them in motion
-function init() {
+function start() {
+
+	baddiesOn = true;
+	$('.baddies').removeClass('off');
 
 	var baddyElements = $('div.baddies > div.baddy');
 
@@ -31,6 +34,13 @@ function init() {
 		moveBaddy( baddies[i] );
 	}
 }
+
+function stop() {
+	baddiesOn = false;
+	$('.baddies').addClass('off');
+}
+
+
 
 // Takes in a boddy class and moves it per its speeds or resets it if it goes off screen
 function moveBaddy(baddy) {
@@ -51,7 +61,9 @@ function moveBaddy(baddy) {
 		$( "div.baddy#" + baddy.id ).css( 'top', newYPosition + 'px' );
 	}
 
-	setTimeout( function() { moveBaddy( baddy ) }, 20 );	
+	if( baddiesOn ) {
+		setTimeout( function() { moveBaddy( baddy ) }, 20 );	
+	}
 };
 
 function resetBaddy(baddy) { 

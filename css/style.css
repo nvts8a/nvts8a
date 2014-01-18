@@ -18,6 +18,10 @@ body * {
 
 /* Baddy Rules */
 
+div.baddies.off {
+	display: none;
+}
+
 div.baddies div.baddy {
 	position: absolute;
 }
@@ -60,15 +64,16 @@ div.navigation div.link {
 	width: 120px;
 }
 
-div.navigation div.link img {
+div.link a img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	padding-top: 8px;
 }
 
 /* CSS3 Animation */
 
-a.selected img {
+div.link a.selected img {
 	animation-duration: 1s;
 	animation-name: bounce;
 	animation-iteration-count: infinite;
