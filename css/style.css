@@ -29,7 +29,7 @@ div.baddies div.baddy img {}
 
 div.navigation {
 	display: block;
-	height: 64px;
+	height: 80px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0px;
@@ -53,6 +53,7 @@ div.navigation#skills {
 
 div.navigation div.link {
 	display: inline-block;
+	height: 80px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0px;
@@ -63,6 +64,29 @@ div.navigation div.link img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+/* CSS3 Animation */
+
+a.selected img {
+	animation-duration: 1s;
+	animation-name: bounce;
+	animation-iteration-count: infinite;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-name: bounce;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+	0% {	padding-top: 0px; }
+	50% {	padding-top: 16px; }
+	100% {	padding-top: 0px; }
+}
+
+@-webkit-keyframes bounce {
+	0% {	padding-top: 0px; }
+	50% {	padding-top: 16px; }
+	100% {	padding-top: 0px; }
 }
 
 /* Footer Rules */
