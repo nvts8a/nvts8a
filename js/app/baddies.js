@@ -48,12 +48,13 @@ function moveBaddy(baddy) {
 	var windowWidth = $(window).width();
 	var newXPosition = parseInt( $( "div.baddy#" + baddy.id ).css('left') ) + baddy.xSpeed;
  
-	var windowHeight = $(window).height();
+	var windowTop = $(window).scrollTop();
+	var windowBottom = windowTop + $(window).height();
 	var newYPosition = parseInt( $( "div.baddy#" + baddy.id ).css('top') ) + baddy.ySpeed;
 
 	if( newXPosition > windowWidth ||
-		newYPosition > windowHeight ||
-		newYPosition < -64 ) {
+		newYPosition > windowBottom ||
+		newYPosition < windowTop - 64 ) {
 		resetBaddy( baddy );
 	}
 	else {
