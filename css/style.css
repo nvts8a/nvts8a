@@ -83,15 +83,27 @@ div.link a.selected img {
 }
 
 @keyframes bounce {
-	0% {	padding-top: 0px; }
-	50% {	padding-top: 16px; }
-	100% {	padding-top: 0px; }
+	0% {	padding-top: 8px; }
+	13% {	padding-top: 12px; }
+	25% {	padding-top: 16px; }
+	37% {	padding-top: 12px; }
+	50% {	padding-top: 8px; }
+	63% {	padding-top: 4px; }
+	75% {	padding-top: 0px; }
+	87% {	padding-top: 4px; }
+	100% {	padding-top: 8px; }
 }
 
 @-webkit-keyframes bounce {
-	0% {	padding-top: 0px; }
-	50% {	padding-top: 16px; }
-	100% {	padding-top: 0px; }
+	0% {	padding-top: 8px; }
+	12% {	padding-top: 12px; }
+	25% {	padding-top: 16px; }
+	37% {	padding-top: 12px; }
+	50% {	padding-top: 8px; }
+	62% {	padding-top: 4px; }
+	75% {	padding-top: 0px; }
+	87% {	padding-top: 4px; }
+	100% {	padding-top: 8px; }
 }
 
 /* Footer Rules */
