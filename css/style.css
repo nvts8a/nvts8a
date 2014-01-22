@@ -34,24 +34,22 @@ div.baddies div.baddy img {}
 div.navigation {
 	display: block;
 	height: 80px;
+	margin-bottom: 32px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0px;
 }
 
 div.navigation#app {
-	padding-bottom: 32px;
-	padding-top: 32px;
+	margin-top: 32px;
 	width: 640px;
 }
 
 div.navigation#experience {
-	padding-top: 32px;
 	width: 256px;
 }
 
 div.navigation#skills {
-	padding-top: 32px;
 	width: 384px;
 }
 
@@ -135,15 +133,8 @@ div.section {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 640px;
-}
-
-div.section div.content {
-	margin-left: 64px;
-	margin-right: 64px;
-	padding-bottom: 32px;
-	padding-top: 32px;
-	width: 512px;
+	padding: 32px;
+	width: 576px;
 }
 
 div.section div.content div.item {
