@@ -140,7 +140,7 @@
 		<script type="text/x-handlebars" data-template-name="app/skills/index">	
 			{{#each}}
 			<div class="item">
-				{{skill}}: {{duration}} years<br/>
+				{{skill}}: {{duration}} {{inflectionSkillDuration duration}}<br/>
 				{{#if location}}
 				At: {{location}}</br>
 				{{else}}
