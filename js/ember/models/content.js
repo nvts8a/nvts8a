@@ -26,6 +26,7 @@ App.Skills = DS.Model.extend( {
 });
 
 
+
 // Fixtures for working with, should be replaced with a MySQL Database Adaptor
 
 App.Experience.FIXTURES = [
