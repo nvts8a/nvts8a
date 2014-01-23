@@ -35,7 +35,7 @@ App.Experience.FIXTURES = [
 		location: "ePrize Inc",
 		title: "Associate Software Engineer", 
 		startDate: new Date(2012, 7),
-		endDate: null, 
+		endDate: new Date(), 
 		type: 'work',
 		metadata: null
 	},
