@@ -41,7 +41,7 @@ App.Experience.FIXTURES = [
 	},
 	{
 		id: 2,
-		location: "Lawrence Tech",
+		location: "Lawrence Technological University",
 		title: "Bachelor of Science - Computer Science", 
 		startDate: new Date(2009, 8),
 		endDate: new Date(2012, 6), 
@@ -54,6 +54,24 @@ App.Experience.FIXTURES = [
 		title: "Temporary Developer for Special Projects", 
 		startDate: new Date(2011, 0),
 		endDate: new Date(2012, 7), 
+		type: 'work',
+		metadata: null
+	},
+	{
+		id: 4,
+		location: "Henry Ford Community College",
+		title: "Associates in Applied Science - Computer Information Systems", 
+		startDate: new Date(2007, 8),
+		endDate: new Date(2009, 8), 
+		type: 'school',
+		metadata: null
+	},
+	{
+		id: 5,
+		location: "Henry Ford Community College",
+		title: "Intern Application Developer",
+		startDate: new Date(2008, 8),
+		endDate: new Date(2009, 8), 
 		type: 'work',
 		metadata: null
 	},
