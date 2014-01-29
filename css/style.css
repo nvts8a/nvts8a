@@ -142,6 +142,19 @@ div.section div.content div.item {
 	margin: 32px;
 }
 
+/* Index Rules */
+
+div#index div.photo img#frankenstein {
+	margin-bottom: 32px;
+}
+
+div#index div.photo img#frankenstein {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 256px;
+}
+
 /* About Rules */
 
 div#about div.photo {
@@ -151,7 +164,7 @@ div#about div.photo {
 	width: 512px;
 }
 
-div#about div.photo img.frame {
+div#about div.photo img#frame {
 	height: 512px;
 	left: 0px;
 	position: absolute;
@@ -159,7 +172,7 @@ div#about div.photo img.frame {
 	width: 512px;
 }
 
-div#about div.photo img.me {
+div#about div.photo img#me {
 	height: 410px;
 	margin: 64px;
 }
