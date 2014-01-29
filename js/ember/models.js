@@ -83,16 +83,24 @@ App.References.FIXTURES = [
 		name: "Jeremy Lance",
 		position: "Senior Software Engineer",
 		location: "ePrize Inc",
-		phoneNumber: "(734) 754-6515",
-		emailAddress: "me@jerlance.com"
+		phoneNumber: "(734) 754-####",
+		emailAddress: "XXXX@jerlance.com"
 	},
 	{
 		id: 2,
 		name: "Jeff Kenward",
 		position: "Lead Developer/Technical Architect",
 		location: "DTE Energy",
-		phoneNumber: "(313) 235-3586",
-		emailAddress: "kenwardj@dteenergy.com"
+		phoneNumber: "(313) 235-####",
+		emailAddress: "XXXX@dteenergy.com"
+	},
+	{
+		id: 3,
+		name: "Joseph Thomas",
+		position: "Manager",
+		location: "DTE Energy",
+		phoneNumber: "(313) 235-####",
+		emailAddress: "XXXX@dteenergy.com"
 	}
 ];
 
