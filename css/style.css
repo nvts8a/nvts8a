@@ -144,6 +144,10 @@ div.section div.content div.item {
 
 /* Index Rules */
 
+div#index div.text h1 {
+	text-align: center;	
+}
+
 div#index div.photo img#frankenstein {
 	margin-bottom: 32px;
 }
