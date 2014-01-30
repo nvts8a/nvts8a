@@ -89,10 +89,10 @@
 				
 				{{#each}}
 				<div class="item">
-					{{name}}<br/>
-					{{position}} at {{location}}<br/>
-					{{phoneNumber}}<br>
-					{{emailAddress}}
+					<div class="bold">{{name}}</div>
+					<div>{{position}} at {{location}}</div>
+					<div>{{phoneNumber}}</div>
+					<div>{{emailAddress}}</div>
 				</div>
 				{{/each}}
 
@@ -151,9 +151,9 @@
 		<script type="text/x-handlebars" data-template-name="app/experience/index">		
 			{{#each}}
 			<div class="item">
-				{{location}}<br/>
-				{{title}}<br/>
-				{{formatExperienceDate startDate}} to {{formatExperienceDate endDate}}<br/>
+				<div class="bold">{{location}}</div>
+				<div>{{title}}</div>
+				<div>{{formatExperienceDate startDate}} to {{formatExperienceDate endDate}}</div>
 			</div>
 			{{/each}}
 		</script>
@@ -172,7 +172,7 @@
 			
 			<div class="content">
 				<div class="description">
-					<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius laoreet ornare.</div>
+					<div class="text">You can touch many things working at an agency or on a large project with a small team. Here are some of them.</div>
 				</div> 
 				
 				{{outlet}}
@@ -184,9 +184,9 @@
 		<script type="text/x-handlebars" data-template-name="app/skills/index">	
 			{{#each}}
 			<div class="item">
-				{{skill}}: {{duration}} {{inflectionSkillDuration duration}}<br/>
+				<div class="inline bold">{{skill}}</div>: {{duration}} {{inflectionSkillDuration duration}}<br/>
 				{{#if location}}
-				At: {{location}}</br>
+				<div>At: {{location}}</div>
 				{{else}}
 				{{/if}}
 			</div>
@@ -217,7 +217,9 @@
 
 		<!-- Ember Implementation -->
 		<script src="js/ember/application.js"></script>
-		<script src="js/ember/models.js"></script>
+		<script src="js/ember/models/experience.js"></script>
+		<script src="js/ember/models/references.js"></script>
+		<script src="js/ember/models/skills.js"></script>
 		<script src="js/ember/router.js"></script>
 		<script src="js/ember/controllers.js"></script>
 	</body>

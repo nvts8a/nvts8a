@@ -7,7 +7,6 @@ body {
 	background-position: center;
 	color: #FFFFFF;
 	font-family: "Courier New", Courier, monospace; 
-	font-weight: bold;
 	width: 100%;
 }
 
@@ -15,6 +14,13 @@ body * {
 	position: relative;
 }
 
+div.bold {
+	font-weight: bold;
+}
+
+div.inline {
+	display: inline;
+}
 
 /* Baddy Rules */
 
