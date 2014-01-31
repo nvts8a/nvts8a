@@ -13,11 +13,50 @@
 		<script type="text/x-handlebars" data-template-name="app">	
 			
 			<div id='app' class='navigation'>
-				<div class='link'>{{#link-to "app.index"		activeClass="selected"}}<img id="home" src="img/icon/home-icon.png">{{/link-to}}</div>
-				<div class='link'>{{#link-to "app.experience"	activeClass="selected"}}<img id="experience" src="img/icon/experience-icon.png">{{/link-to}}</div>
-				<div class='link'>{{#link-to "app.skills"		activeClass="selected"}}<img id="skills" src="img/icon/skills-icon.png">{{/link-to}}</div>
-				<div class='link'>{{#link-to "app.references"	activeClass="selected"}}<img id="references" src="img/icon/references-icon.png">{{/link-to}}</div>
-				<div class='link'>{{#link-to "app.about"		activeClass="selected"}}<img id="about" src="img/icon/about-icon.png">{{/link-to}}</div>
+				<div class="link">
+				{{#link-to "app.index" activeClass="selected"}}
+					<div class="button">	
+						<img id="home" src="img/icon/home-icon.png"/>
+						<h2>Home</h2>
+					</div>
+				{{/link-to}}
+				</div>
+				
+				<div class="link">
+				{{#link-to "app.experience" activeClass="selected"}}
+					<div class="button">	
+						<img id="experience" src="img/icon/experience-icon.png"/>
+						<h2>Exp</h2>
+					</div>
+				{{/link-to}}
+				</div>
+				
+				<div class="link">
+				{{#link-to "app.skills"	activeClass="selected"}}
+					<div class="button">	
+						<img id="skills" src="img/icon/skills-icon.png"/>
+						<h2>Skills</h2>
+					</div>
+				{{/link-to}}
+				</div>
+				
+				<div class="link">
+				{{#link-to "app.references"	activeClass="selected"}}
+					<div class="button">	
+						<img id="references" src="img/icon/references-icon.png"/>
+						<h2>Ref</h2>
+					</div>
+				{{/link-to}}
+				</div>
+				
+				<div class="link">
+				{{#link-to "app.about" activeClass="selected"}}
+					<div class="button">	
+						<img id="about" src="img/icon/about-icon.png"/>
+						<h2>About</h2>
+					</div>
+				{{/link-to}}
+				</div>
 			</div>
 			
 			<div class="section">
@@ -133,8 +172,23 @@
 
 		<script type="text/x-handlebars" data-template-name="app/experience">	
 			<div id="experience" class="navigation">
-				<div class='link'>{{#link-to "app.experience.school"	activeClass="selected"}}<img id="school" src="img/icon/school-icon.png">{{/link-to}}</div>
-				<div class='link'>{{#link-to "app.experience.work"		activeClass="selected"}}<img id="work" src="img/icon/work-icon.png">{{/link-to}}</div>
+				<div class='link'>
+				{{#link-to "app.experience.school" activeClass="selected"}}
+					<div class="button">
+						<img id="school" src="img/icon/school-icon.png"/>
+						<h3>School</h3>
+					</div>
+				{{/link-to}}
+				</div>
+				
+				<div class='link'>
+				{{#link-to "app.experience.work" activeClass="selected"}}
+					<div class="button">
+						<img id="work" src="img/icon/work-icon.png"/>
+						<h3>Work</h3>
+					</div>
+				{{/link-to}}
+				</div>
 			</div>
 		
 			<div class="content">
@@ -164,9 +218,32 @@
 
 		<script type="text/x-handlebars" data-template-name="app/skills">	
 			<div id="skills" class="navigation">
-				<div class='link'>{{#link-to "app.skills.languages"		activeClass="selected"}}<img id="languages" src="img/icon/languages-icon.png">{{/link-to}}</div>
-				<div class='link'>{{#link-to "app.skills.technologies"	activeClass="selected"}}<img id="technologies" src="img/icon/technologies-icon.png">{{/link-to}}</div>
-				<div class='link'>{{#link-to "app.skills.processes"		activeClass="selected"}}<img id="processes" src="img/icon/processes-icon.png">{{/link-to}}</div>
+				<div class='link'>
+				{{#link-to "app.skills.languages" activeClass="selected"}}
+					<div class="button">
+						<img id="languages" src="img/icon/languages-icon.png">
+						<h3>Languages</h3>
+					</div>
+				{{/link-to}}
+				</div>
+				
+				<div class='link'>
+				{{#link-to "app.skills.technologies" activeClass="selected"}}
+					<div class="button">
+						<img id="technologies" src="img/icon/technologies-icon.png">
+						<h3>Technology</h3>
+					</div>
+				{{/link-to}}
+				</div>
+				
+				<div class='link'>
+				{{#link-to "app.skills.processes" activeClass="selected"}}
+					<div class="button">
+						<img id="processes" src="img/icon/processes-icon.png">
+						<h3>Processes</h3>
+					</div>
+				{{/link-to}}
+				</div>
 			</div>
 
 			

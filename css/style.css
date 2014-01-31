@@ -68,16 +68,27 @@ div.navigation div.link {
 	width: 120px;
 }
 
-div.link a img {
+div.link a {
+	color: #FFFFFF;
+	text-decoration: none;
+	text-shadow: -2px 0 #9290FF, 0 2px #9290FF, 2px 0 #9290FF, 0 -2px #9290FF;
+}
+
+div.button img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 8px;
+	top: 8px;
+}
+
+div.button h2,h3 {
+	text-align: center;
+	top: -56px;
 }
 
 /* CSS3 Animation */
 
-div.link a.selected img {
+div.link a.selected div.button img {
 	animation-duration: 1s;
 	animation-name: bounce;
 	animation-iteration-count: infinite;
@@ -87,27 +98,27 @@ div.link a.selected img {
 }
 
 @keyframes bounce {
-	0% {	padding-top: 8px; }
-	13% {	padding-top: 12px; }
-	25% {	padding-top: 16px; }
-	37% {	padding-top: 12px; }
-	50% {	padding-top: 8px; }
-	63% {	padding-top: 4px; }
-	75% {	padding-top: 0px; }
-	87% {	padding-top: 4px; }
-	100% {	padding-top: 8px; }
+	0% {	top: 8px; }
+	13% {	top: 12px; }
+	25% {	top: 16px; }
+	37% {	top: 12px; }
+	50% {	top: 8px; }
+	63% {	top: 4px; }
+	75% {	top: 0px; }
+	87% {	top: 4px; }
+	100% {	top: 8px; }
 }
 
 @-webkit-keyframes bounce {
-	0% {	padding-top: 8px; }
-	12% {	padding-top: 12px; }
-	25% {	padding-top: 16px; }
-	37% {	padding-top: 12px; }
-	50% {	padding-top: 8px; }
-	62% {	padding-top: 4px; }
-	75% {	padding-top: 0px; }
-	87% {	padding-top: 4px; }
-	100% {	padding-top: 8px; }
+	0% {	top: 8px; }
+	12% {	top: 12px; }
+	25% {	top: 16px; }
+	37% {	top: 12px; }
+	50% {	top: 8px; }
+	62% {	top: 4px; }
+	75% {	top: 0px; }
+	87% {	top: 4px; }
+	100% {	top: 8px; }
 }
 
 /* Footer Rules */
