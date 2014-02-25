@@ -161,22 +161,11 @@ div.section div.content div.item {
 
 /* Index Rules */
 
-div#index div.text h1 {
+/* About Rules */
+
+div#about h1 {
 	text-align: center;	
 }
-
-div#index div.photo img#frankenstein {
-	margin-bottom: 32px;
-}
-
-div#index div.photo img#frankenstein {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 256px;
-}
-
-/* About Rules */
 
 div#about div.photo {
 	display: block;
@@ -184,6 +173,13 @@ div#about div.photo {
 	margin-left: auto;
 	margin-right: auto;
 	width: 512px;
+}
+
+div#about div.photo img#frankenstein {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 256px;
 }
 
 div#about div.photo img#frame {
@@ -196,6 +192,7 @@ div#about div.photo img#me {
 	height: 410px;
 	margin: 64px;
 	position: absolute;
+	width: 410px;
 	z-index: 1;
 }
 
