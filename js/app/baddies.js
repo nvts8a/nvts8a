@@ -9,6 +9,7 @@ function createBaddy(id) {
 	var baddy = new Object();
 
 	// Baddy Constents
+	baddy.size		= 64;
 	baddy.id		= id;
 	baddy.element	= $( "div.baddy#" + id );
 
@@ -54,7 +55,7 @@ function moveBaddy(baddy) {
 
 	if( newXPosition > windowWidth ||
 		newYPosition > windowBottom ||
-		newYPosition < windowTop - 64 ) {
+		newYPosition < windowTop - baddy.size ) {
 		resetBaddy( baddy );
 	}
 	else {
