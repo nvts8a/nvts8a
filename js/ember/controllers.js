@@ -23,15 +23,13 @@ App.AppSkillsTechnologiesController = skillsController;
 App.AppAboutController = Ember.ObjectController.extend( {
 	actions: {
 		toggleSubsection:	function() {
-								var targetId = event.target.id;	
-								var subsection = '#'+targetId+'.subsection';
+								var subsection = '#' + event.target.id + '.subsection';	
 								var isHidden = $(subsection).hasClass('hidden');
 
+								$('.subsection').addClass('hidden');
+								
 								if( isHidden ) {
 									$(subsection).removeClass('hidden');
-								}
-								else {
-									$(subsection).addClass('hidden');
 								}
 							}
 	}
