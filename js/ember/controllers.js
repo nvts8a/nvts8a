@@ -18,3 +18,21 @@ App.AppSkillsIndexController = skillsController;
 App.AppSkillsLanguagesController = skillsController;
 App.AppSkillsProcessesController = skillsController;
 App.AppSkillsTechnologiesController = skillsController;
+
+// About controller, used for subsections
+App.AppAboutController = Ember.ObjectController.extend( {
+	actions: {
+		toggleSubsection:	function() {
+								var targetId = event.target.id;	
+								var subsection = '#'+targetId+'.subsection';
+								var isHidden = $(subsection).hasClass('hidden');
+
+								if( isHidden ) {
+									$(subsection).removeClass('hidden');
+								}
+								else {
+									$(subsection).addClass('hidden');
+								}
+							}
+	}
+});

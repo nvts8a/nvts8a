@@ -14,6 +14,10 @@ body * {
 	position: relative;
 }
 
+.hidden {
+	display: none;
+}
+
 div.bold {
 	font-weight: bold;
 }
@@ -192,7 +196,7 @@ div#about div.photo img#me {
 	height: 410px;
 	margin: 64px;
 	position: absolute;
-	width: 410px;
+	width: 375px;
 	z-index: 1;
 }
 
@@ -206,7 +210,7 @@ div#about div.photo div#loading {
 	z-index: 0;
 }
 
-div#about div.social-sites {
+div#about div.sites {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
