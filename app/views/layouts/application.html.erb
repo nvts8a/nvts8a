@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>Nvts8a</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+		<meta charset="utf-8">
+		<%= stylesheet_link_tag "application", media: "all" %>
+		<link rel="shortcut icon" href=<%= asset_path "favicon.ico" %> >
+		<title>Steven J. Justin - Probably the Best at Everything</title>
+	</head>
 
-<%= yield %>
+	<body>
 
-</body>
+		<%= yield %>
+	
+	</body>
 </html>
